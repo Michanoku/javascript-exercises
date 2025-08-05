@@ -23,13 +23,17 @@ const power = function(a, b) {
 	return a**b;
 };
 
+// Passed
 const factorial = function(a) {
-    const [start, end] = (a < 1) ? [a, 1] : [1, a];
-    let sum = start;
-    for (i = start + 1; i < end + 1; i++) {
-        sum+= i;
+    if (a === 0) {
+      return 1;
+    } else {
+      let result = 1;
+      for (i = 1; i <= a; i++) {
+          result*= i;
+      }
+      return result;
     }
-    return sum;
 };
 
 // Do not edit below this line
