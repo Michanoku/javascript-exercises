@@ -1,12 +1,12 @@
 const findTheOldest = function(people) {
     people.sort((personA, personB) => {
         function age(person) {
-            if (!"yearOfDeath" in person) {
+            if ("yearOfDeath" in person) {
+                return person.yearOfDeath - person.yearOfBirth;
+            } else {
                 const currentDate = new Date();
                 const currentYear = currentDate.getFullYear();
                 return currentYear - person.yearOfBirth;
-            } else {
-                return person.yearOfDeath - person.yearOfBirth;
             }
         }
         return ((age(personB) - age(personA)));
