@@ -18,8 +18,13 @@ const power = function(a, b) {
 	return a^b;
 };
 
-const factorial = function() {
-	
+const factorial = function(a, b) {
+    const [start, end] = (a < b) ? [a, b] : [b, a];
+    let sum = start;
+    for (i = start + 1; i < end + 1; i++) {
+        sum+= i;
+    }
+    return sum;
 };
 
 // Do not edit below this line
