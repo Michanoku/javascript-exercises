@@ -1,17 +1,21 @@
+// Passed
 const add = function(a, b) {
 	return a + b;
 };
 
+// Passed
 const subtract = function(a, b) {
   return a - b;
 };
 
+// Passed
 const sum = function(arr) {
 	return arr.reduce((number, total) => total + number, 0);
 };
 
-const multiply = function(a, b) {
-  return a * b;
+// Passed
+const multiply = function(arr) {
+  return arr.reduce((number, total) => total * number, 1);
 };
 
 const power = function(a, b) {
